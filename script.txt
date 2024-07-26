@@ -1,0 +1,146 @@
+Title: The Connection of This Classic Physics Problem with Euler’s Formula That 
+Left Me Stunned
+
+**INTRODUCTION TO THE PROBLEM**
+Imagine there are several forces of equal magnitude acting on an object at the 
+same angle. If these angles are evenly spaced around the object in a circle, 
+making an angle of $$\frac{2\pi}{n}$$, then something interesting happens. All these forces balance 
+each other out perfectly, so the object doesn't move in any direction. In other 
+words, it stays in equilibrium.
+
+I know understanding this problem can be tricky at first, so I 
+find it helpful to begin with some clear examples to make it easier to grasp.
+
+Imagine a block on a frictionless surface, being pulled by a force in one 
+direction. According to Newton's law the block accelerates in that direction. 
+But if a force of equal magnitude being applied in the opposite direction, 
+making $$\pi$$ (which is 180 degrees) radians, the forces cancel out and the object 
+stays still.
+
+Now what happens if we have three forces, each separated by $$\frac{2\pi}{3}$$ (which is 120 
+degrees)? We can use the parallelogram law of vector addition which says, “If 
+you consider two vectors acting at a point as two adjacent sides of a 
+parallelogram, then the resultant of two vectors is given by the diagonal of the 
+parallelogram.” In this case, add any two forces together, and then the result 
+is equal and opposite to the third force.
+
+Similarly, with four forces making $$\frac{\pi}{2}$$(which is 90 degrees), they will cancel each 
+other out because each force has exactly the opposite force to cancel out.
+
+This rule works for any number of forces 5, 6, or 7 as long as there is more 
+than one. If there's only one force, it doesn't have another force to balance it 
+out, so it doesn't apply.
+
+**COMING TO THE POINT**
+Coming to the point, the main goal of this video is to introduce you to a classic physics problem 
+that often appears in physics and engineering. But when you dive deeper and start asking questions like why is this true
+for all n, the most beautiful theorem in mathematics called the euler's formula comes to handy.
+
+[Show Up This problem statement on screen]
+/If there are n number of forces (or vectors in general) of equal magnitude 
+acting at a point at evenly spaced angles, making radians around a circle, all 
+these forces balance each other out perfectly. In other words, the vector sum of 
+all these forces is 0./
+
+**ADDING A PERSONAL ANECTODE**
+First time I encountered this problem was while trying to find electric field 
+intensity at the center of a uniformly charged ring.
+
+Think of this ring being made up of many infinitesimal charge elements dQ. Each 
+element creates a small electric field dE which is directed radially outward 
+along the line connecting dQ and center. All these electric fields are of equal 
+magnitude because of being at the same distance, evenly spaced around in a 
+circle. The vector sum of all these electric fields is 0.
+
+When I asked my teacher why this happens, he simply said, "It's symmetry." Each 
+charge element dQ on the ring has an equal dQ located directly opposite, 
+canceling each other out. This explanation works well for continuous 
+distributions. But what if we have a discrete number of charges around the 
+circle? For an even number of charges, each electric field has an opposite field 
+to cancel it out. But with an odd number of electric fields, there’s no exact 
+opposite field to cancel out.
+
+One way to think about it is by shifting each of these vectors without changing 
+their angle, connecting the tail of one to the head of another. They form a 
+closed polygon, making the resultant zero. This visualization works well for 
+special cases, but what about a more general and theoretical proof without any 
+geometry? As someone who loves math, I didn’t want to rely on intuition alone. 
+For mathematicians, an idea remains a conjecture unless it’s proven for all n.
+
+It wasn't until later, when I stumbled upon Euler's formula, that things started 
+to click. Suddenly, this abstract math concept started making sense to me. 
+You’ll rarely find the proof in textbooks or online. It might seem surprising 
+that an abstract concept like Euler’s Formula can help prove this practical 
+problem in physics. Trust me, this video is going to be interesting because 
+you’ll see one of the most beautiful proofs in physics.
+
+**STARTING PROOF**
+Let’s first consider these vectors acting at the origin of an x-y plane. Our 
+motive is to find the sum of all these vectors. When summing multiple coplanar 
+vectors, it’s always beneficial to resolve them into x and y components. What 
+does resolving mean? It means expressing any vector as the sum of two 
+perpendicular components: one along the x-axis and one along the y-axis. It’s 
+like projecting the vectors into the x and y axis. The x-component of the vector 
+is ∣v∣ times the cosine of the angle it makes with the x-axis, and the 
+y-component is ∣v∣ times the sine of the angle. We do this for each of these 
+vectors. It’s really helpful because by decomposing all vectors this way, we 
+simplify the math because we can independently add the x-components and 
+y-components.
+
+Let's picture this to better understand how decomposition works. Consider 2 
+vectors at origin. We know from the parallelogram law of vector addition, the 
+resultant is given by the diagonal. You can derive from laws of trigonometry and 
+geometry that the length of this diagonal comes out to be this. And angle/ 
+direction it makes with x-axis comes out to be this. 
+
+.
+.
+.
+.
+.
+
+For those who don't know what Euler’s formula is, I would recommend watching my 
+previous video in this playlist. For now, I am going to give a brief intro to 
+what it is. You can picture a point in a unit circle in a complex plane, and 
+represent it as a vector making angle with the x-axis. This vector can be 
+expressed in the exponential form as, which equals.
+
+Now, let's imagine there are vectors around this circle. We can represent each 
+of these vectors in exponential form and sum them all to find the result. So, to 
+represent it in exponential form we need to know what angles each of these 
+vectors make with the x-axis. Let's number these vectors from to. The th vector 
+makes angle, the st makes, the nd makes, and so on. The, and so on. The th 
+vector makes an angle. 
+
+So, the th vector is. Summing both sides, we get:
+
+Summing those trigonometric functions can be tedious. So, we express them in 
+exponential form using Euler’s formula. It becomes:
+
+If we expand the summation, we get:
+
+This is a geometric series. To sum a geometric series, we use the formula for 
+the sum of a geometric series. Notice that is common in all terms. Let's assume 
+for simplicity. Our series now simplifies to:
+
+The sum of this geometric series is given by:
+
+Since, replacing x in the formula, we get. We know that:
+
+which equals 1. Therefore, the sum reduces to:
+
+Hence, the total sum is 0. See how easy that was.
+
+Now let's talk about why this idea matters in the real world. Fans and Turbines: 
+The blades of fans and turbines are often placed 120 degrees apart. This design 
+ensures that the forces on the central axis are balanced, resulting in smooth 
+and efficient rotation.
+
+Electric Motors: In three-phase electric motors, the currents are phase-shifted 
+by 120 degrees to ensure the motor runs smoothly and efficiently by balancing 
+the forces within the motor.
+
+Triangular Trusses in Bridges: The forces in a triangular truss bridge are 
+evenly distributed and balanced, which provides stability and strength to the 
+structure. This design helps in constructing stable and strong bridges that can 
+bear heavy loads without bending or collapsing.
