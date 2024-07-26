@@ -32,9 +32,7 @@ than one. If there's only one force, it doesn't have another force to balance it
 out, so it doesn't apply.
 
 **COMING TO THE POINT**
-Coming to the point, the main goal of this video is to introduce you to a classic physics problem 
-that often appears in physics and engineering. But when you dive deeper and start asking questions like why is this true
-for all n, the most beautiful theorem in mathematics called the euler's formula comes to handy.
+Let's get to the heart of the matter: the primary objective of this video is to introduce you to a classic physics problem frequently encountered in physics and engineering. However, when you delve deeper and start questioning why this holds true for any number of vectors 𝑛, the elegant Euler's formula, one of the most beautiful theorems in mathematics, becomes invaluable.
 
 [Show Up This problem statement on screen]
 /If there are n number of forces (or vectors in general) of equal magnitude 
