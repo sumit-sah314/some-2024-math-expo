@@ -1,5 +1,7 @@
-Title: The Connection of This Classic Physics Problem with Euler’s Formula That 
+Title1: The Beautiful Connection of This Classic Physics Problem with Euler’s Formula That 
 Left Me Stunned
+OR
+Title2: This Classic Physics Problem's Stunning Connection to Euler’s Formula Totally Blew Me Away
 
 **INTRODUCTION TO THE PROBLEM**
 Imagine there are several forces of equal magnitude acting on an object at the 
@@ -32,7 +34,7 @@ than one. If there's only one force, it doesn't have another force to balance it
 out, so it doesn't apply.
 
 **COMING TO THE POINT**
-Let's get to the heart of the matter: the primary objective of this video is to introduce you to a classic physics problem frequently encountered in physics and engineering. However, when you delve deeper and start questioning why this holds true for any number of vectors 𝑛, the elegant Euler's formula, one of the most beautiful theorems in mathematics, becomes invaluable.
+Let's get to the heart of the matter: the primary objective of this video is to introduce you to this classic problem frequently encountered in physics and engineering. However, when you delve deeper and start questioning why this holds true for any number of vectors 𝑛, the elegant Euler's formula, one of the most beautiful theorems in mathematics, becomes invaluable.
 
 [Show Up This problem statement on screen]
 /If there are n number of forces (or vectors in general) of equal magnitude 
@@ -84,13 +86,6 @@ y-component is ∣v∣ times the sine of the angle. We do this for each of these
 vectors. It’s really helpful because by decomposing all vectors this way, we 
 simplify the math because we can independently add the x-components and 
 y-components.
-
-Let's picture this to better understand how decomposition works. Consider 2 
-vectors at origin. We know from the parallelogram law of vector addition, the 
-resultant is given by the diagonal. You can derive from laws of trigonometry and 
-geometry that the length of this diagonal comes out to be this. And angle/ 
-direction it makes with x-axis comes out to be this. 
-
 .
 .
 .
