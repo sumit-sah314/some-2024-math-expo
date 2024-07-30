@@ -1,94 +1,76 @@
-Title1: The Beautiful Connection of This Classic Physics Problem with Euler’s Formula That 
-Left Me Stunned
-OR
-Title2: This Classic Physics Problem's Stunning Connection to Euler’s Formula Totally Blew Me Away
+Title: This Classic Physics Problem's Beautiful Connection to Euler’s Formula Totally Blew Me Away
 
 **INTRODUCTION TO THE PROBLEM**
-Imagine there are several forces of equal magnitude acting on an object at the 
-same angle. If these angles are evenly spaced around the object in a circle, 
-making an angle of $$\frac{2\pi}{n}$$, then something interesting happens. All these forces balance 
-each other out perfectly, so the object doesn't move in any direction. In other 
-words, it stays in equilibrium.
+You might have come across this problem in physics or math class while studying vectors. Imagine you have 𝑛 vectors of the same length, all pointing out from a central point and evenly spaced around a circle, each making an angle of 2𝜋/𝑛 radians. These vectors balance each other out perfectly, so their sum is zero.
 
-I know understanding this problem can be tricky at first, so I 
-find it helpful to begin with some clear examples to make it easier to grasp.
+I know throwing this type of mathematical definition of a problem doesnt seem intuitive at first. Therefore, I always find it helpful to start with some specific examples. Lets start with how and when did i first time i encountered this problem. 
 
-Imagine a block on a frictionless surface, being pulled by a force in one 
-direction. According to Newton's law the block accelerates in that direction. 
-But if a force of equal magnitude being applied in the opposite direction, 
-making $$\pi$$ (which is 180 degrees) radians, the forces cancel out and the object 
-stays still.
+Picture a ring with a uniform positive charge. What’s the electric field intensity at its center?
 
-Now what happens if we have three forces, each separated by $$\frac{2\pi}{3}$$ (which is 120 
-degrees)? We can use the parallelogram law of vector addition which says, “If 
-you consider two vectors acting at a point as two adjacent sides of a 
-parallelogram, then the resultant of two vectors is given by the diagonal of the 
-parallelogram.” In this case, add any two forces together, and then the result 
-is equal and opposite to the third force.
+Think of this ring being made up of many infinitesimal charge elements dQ. Each element creates a small electric field dE which is directed radially outward along the line connecting dQ and center. All these electric fields are of equal magnitude because of being at the same distance, evenly spaced around in a circle. The vector sum of all these electric fields is 0.
 
-Similarly, with four forces making $$\frac{\pi}{2}$$(which is 90 degrees), they will cancel each 
-other out because each force has exactly the opposite force to cancel out.
+When I asked my teacher why, he just said, "It's symmetry." Each charge element has an equal charge directly opposite it, so they cancel out. This makes sense for continuous distributions, but what about discrete charges? With an even number, each field has an opposite to cancel it out. With an odd number, there’s no exact opposite field to cancel out.
 
-This rule works for any number of forces 5, 6, or 7 as long as there is more 
-than one. If there's only one force, it doesn't have another force to balance it 
-out, so it doesn't apply.
+If you're still not following, here's another example:
 
-**COMING TO THE POINT**
-Let's get to the heart of the matter: the primary objective of this video is to introduce you to this classic problem frequently encountered in physics and engineering. However, when you delve deeper and start questioning why this holds true for any number of vectors 𝑛, the elegant Euler's formula, one of the most beautiful theorems in mathematics, becomes invaluable.
+Imagine a block on a frictionless surface being pulled by a force in one direction. According to Newton’s law, the block accelerates in that direction. But if you apply an equal force in the opposite direction, the forces cancel out and the block stays still. Notice our formula holds true—two forces making an angle of 𝜋.
 
-[Show Up This problem statement on screen]
-/If there are n number of forces (or vectors in general) of equal magnitude 
-acting at a point at evenly spaced angles, making radians around a circle, all 
-these forces balance each other out perfectly. In other words, the vector sum of 
-all these forces is 0./
+Now, let’s take it a step further. What if we have three forces, each separated by 2𝜋/3 radians (120 degrees)? Adding these vectors can be tricky, but we use the parallelogram law of vector addition: If you consider two vectors at a point as adjacent sides of a parallelogram, the resultant is given by the diagonal.You see, the result is equal and opposite to the third force.
 
-**ADDING A PERSONAL ANECTODE**
-First time I encountered this problem was while trying to find electric field 
-intensity at the center of a uniformly charged ring.
+Similarly, with four forces making an angle of 𝜋/2 (90 degrees), they cancel each other out because each force has an opposite to cancel it.
 
-Think of this ring being made up of many infinitesimal charge elements dQ. Each 
-element creates a small electric field dE which is directed radially outward 
-along the line connecting dQ and center. All these electric fields are of equal 
-magnitude because of being at the same distance, evenly spaced around in a 
-circle. The vector sum of all these electric fields is 0.
+This rule works for any number of forces—5, 6, or 7—as long as there's more than one. If there's only one force, there's nothing to balance it out. So it does not apply.
 
-When I asked my teacher why this happens, he simply said, "It's symmetry." Each 
-charge element dQ on the ring has an equal dQ located directly opposite, 
-canceling each other out. This explanation works well for continuous 
-distributions. But what if we have a discrete number of charges around the 
-circle? For an even number of charges, each electric field has an opposite field 
-to cancel it out. But with an odd number of electric fields, there’s no exact 
-opposite field to cancel out.
+How do we prove if it works for all n?
 
-One way to think about it is by shifting each of these vectors without changing 
-their angle, connecting the tail of one to the head of another. They form a 
-closed polygon, making the resultant zero. This visualization works well for 
-special cases, but what about a more general and theoretical proof without any 
-geometry? As someone who loves math, I didn’t want to rely on intuition alone. 
-For mathematicians, an idea remains a conjecture unless it’s proven for all n.
+One way to think about it is by shifting each vector without changing their angle, connecting the tail of one to the head of another. They form a closed polygon, making the resultant zero. This works well for special cases, but what about a more general proof without geometry?
 
-It wasn't until later, when I stumbled upon Euler's formula, that things started 
-to click. Suddenly, this abstract math concept started making sense to me. 
-You’ll rarely find the proof in textbooks or online. It might seem surprising 
-that an abstract concept like Euler’s Formula can help prove this practical 
-problem in physics. Trust me, this video is going to be interesting because 
-you’ll see one of the most beautiful proofs in physics.
+The main goal of me making this video isn't just give you intuition to this class problem often encountered in physics and math. When you dive deeper start questioning why this works for any number of vectors, you’ll find that Euler's formula, one of the most beautiful theorems in math, offers elegent proof that you might not often find in textbooks or online. It might be surprising that abstract concept like Euler’s Formula can help prove this practical physics problem, but trust me, this video will be interesting because you’ll see one of the most beautiful proofs in physics and mathematics.
 
 **STARTING PROOF**
-Let’s first consider these vectors acting at the origin of an x-y plane. Our 
-motive is to find the sum of all these vectors. When summing multiple coplanar 
-vectors, it’s always beneficial to resolve them into x and y components. What 
-does resolving mean? It means expressing any vector as the sum of two 
-perpendicular components: one along the x-axis and one along the y-axis. It’s 
-like projecting the vectors into the x and y axis. The x-component of the vector 
-is ∣v∣ times the cosine of the angle it makes with the x-axis, and the 
-y-component is ∣v∣ times the sine of the angle. We do this for each of these 
-vectors. It’s really helpful because by decomposing all vectors this way, we 
-simplify the math because we can independently add the x-components and 
-y-components.
-.
-.
-.
+Let’s begin by considering these vectors acting at the origin of an x-y plane. Our goal is to find the sum of all these vectors. When dealing with multiple coplanar vectors, it’s always helpful to resolve them into their x and y components.
+
+So, what does it mean to resolve a vector? It involves expressing any vector as the sum of two perpendicular components: one along the x-axis and one along the y-axis. In other words, we project the vectors onto the x and y axes.
+
+For a vector with magnitude ∣𝑣∣ and making an angle θ with the x-axis:
+The x-component of the vector is: ∣v∣⋅cos(θ).
+The y-component of the vector is: ∣v∣⋅sin(θ).
+
+We do this for each of the vectors. This approach is really helpful because by decomposing all vectors into their x and y components, we simplify the math. We can then independently add the x-components and y-components of all vectors.
+
+Let's apply this to our problem. For simplicity, we'll assume that each vector has a magnitude of 1. Later, I'll show that if this works for unit vectors, it will also work for vectors of any magnitude
+
+We'll number the vectors from 0 to n-1. Each vector is evenly spaced around the circle, so the angle between consecutive vectors is $$\frac{2\pi}{n}$$. To find the x and y components of each vector, we need to determine the angle each vector makes with the x-axis.
+
+  -The 0th vector is along the x-axis, so it makes an angle of \(0\) radians with the x-axis.
+  -The 1st vector makes an angle of \(\frac{2\pi}{n}\) radians with the x-axis.
+  -The 2nd vector makes an angle of \(\frac{4\pi}{n}\) radians with the x-axis.
+  -The 3rd vector makes an angle of \(\frac{6\pi}{n}\) radians with the x-axis.
+
+Following this pattern, the k-th vector makes an angle of $$\frac{2k\pi}{n}$$ radians with the x-axis.
+
+For each vector \(k\), the x and y components can be calculated using:
+\begin{align*}
+    \text{x-component} &= \cos\left(\frac{2k\pi}{n}\right) \\
+    \text{y-component} &= \sin\left(\frac{2k\pi}{n}\right)
+\end{align*}
+
+\subsection*{Sum of x-Components}
+
+To find the total x-component of all vectors, sum up the x-components of each vector:
+
+\[
+\text{Total x-component} = \sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right)
+\]
+
+\subsection*{Sum of y-Components}
+
+Similarly, the total y-component is:
+
+\[
+\text{Total y-component} = \sum_{k=0}^{n-1} \sin\left(\frac{2k\pi}{n}\right)
+\]
+
 .
 .
 
