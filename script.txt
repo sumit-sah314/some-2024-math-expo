@@ -1,20 +1,30 @@
 Title: This Classic Physics Problem's Beautiful Connection to Euler’s Formula Totally Blew Me Away
 
 **INTRODUCTION TO THE PROBLEM**
-Alright, welcome to Math Simplified!
-Let's dive into this classic problem you might have encountered in physics or math class while studying vectors. Imagine you have 𝑛 vectors of the same length, all pointing out from a central point and evenly spaced around a circle, each making an angle of 2𝜋/𝑛 radians. These vectors balance each other out perfectly, so their sum is zero.
+Hey there!, Welcome to Math Simplified!
+Let's dive into this classic problem you might have encountered in physics or math class, especially while studying vectors. Imagine you have 𝑛 vectors of the same length, all pointing out from a central point and evenly spaced around a circle, each making an angle of 2𝜋/𝑛 radians. These vectors balance each other out perfectly, so their sum is zero.
 
-I know throwing out mathematical definition of the problem might seem a bit abstract. Therefore, I always find it helpful to start with some specific examples. Lets start with how did i first i encountered this problem. 
+I know throwing out mathematical definition of the problem might seem a bit abstract. Therefore, I always find it helpful to start with some specific examples. Lets start with how i first encountered the problem in my physics class. 
 
 Picture a ring with a uniform positive charge. What’s the electric field intensity at its center?
 
-Think of this ring being made up of many infinitesimal charge elements dQ. Each element creates a small electric field dE which is directed radially outward along the line connecting dQ and center. All these electric fields are of equal magnitude because of being at the same distance, evenly spaced around in a circle. The vector sum of all these electric fields is 0.
+Think of this ring as being made up of many infinitesimal charge elements \( dQ \). Each element creates a small electric field \( dE \), which is directed radially outward along the line connecting \( dQ \) and the center of the ring. According to Coulomb's law, the magnitude of this electric field is given by:
 
-When I asked my teacher why this happens, he simply said, "It's symmetry." Each charge element dQ on the ring has an equal dQ located directly opposite, canceling each other out. This explanation works well for continuous distributions. But what if we have a discrete number of charges around the circle? For an even number of charges, each electric field has an opposite field to cancel it out. But with an odd number of electric fields, there’s no exact opposite field to cancel out. So, does this balancing act still work for any number of vectors?
+\[
+|dE| = \frac{k_e \cdot |dQ|}{r^2}
+\]
+
+where \( k_e \) is Coulomb's constant, \( |dQ| \) is the magnitude of the charge element, and \( r \) is the distance from the charge to the point where the field is being calculated—in this case, the center of the ring.
+
+The magnitude of the electric field depends on the amount of charge \( dQ \) and the distance \( r \) from the charge. Since we are considering a uniformly charged ring, each element \( dQ \) has the same charge because the charge is evenly distributed along the entire ring. Additionally, because all these elements are equidistant from the center, being part of a circle, the electric fields they produce are of equal magnitude.
+
+The vector sum of all these electric fields is zero.
+
+When I asked my teacher why this happens, he simply said, "It's symmetry." Each charge element \( dQ \) on the ring has an equal \( dQ \) located directly opposite, canceling each other out. This explanation works well for continuous distributions. But what if we have a discrete number of charges around the circle? For an even number of charges, each electric field has an opposite field to cancel it out. But with an odd number of electric fields, there's no exact opposite field to cancel out. So, does this balancing act still work for any number of vectors?
 
 If you're still not quite getting the gist of the problem, no worries, let me give you another example:
 
-Imagine a block on a frictionless surface being pulled by a force in one direction. According to Newton’s law, the block accelerates in that direction. But if you apply an equal force in the opposite direction, the forces cancel out and the block stays still. Notice our formula holds true—two forces making an angle of 𝜋.
+Imagine a block on a frictionless surface being pulled in one direction. According to Newton's laws, the block accelerates in that direction. But if you apply an equal force in the opposite direction, the forces cancel out and the block stays still. Notice our formula holds true—two forces making an angle of \(\frac{2\pi}{2}\), which is \(\pi\) radians.
 
 Now, let’s take it a step further. What if we have three forces, each separated by 2𝜋/3 radians (120 degrees)? Adding these vectors can be tricky, but we use the parallelogram law of vector addition: If you consider two vectors at a point as adjacent sides of a parallelogram, the resultant is given by the diagonal.You see, the result is equal and opposite to the third force.
 
@@ -25,99 +35,139 @@ This rule works for any number of forces—5, 6, or 7—as long as there's more 
 Here's the revised version of our problem statement: If there are 𝑛 equal vectors acting at a point and making an angle of 
 2𝜋/𝑛, evenly spaced around a circle, such that n>1, then they should balance out to zero.
 
-So, how do we prove this works for any number of vectors 𝑛?
+So, how do we prove weather this works for any number of vectors 𝑛?
 
-One way to think about it is by shifting each vector without changing their angle, connecting the tail of one to the head of another. They form a closed polygon, making the resultant zero. This visualisation is a beautiful way to picture why this is true. However, The main goal this video isn't just to give you intuition to this problem. When you dive deeper start questioning why this works for any number of vectors, you’ll find that Euler's formula, one of the most beautiful theorems in math, offers elegent proof that you might not often find in textbooks or online. It might be surprising that abstract concept like Euler’s Formula can help prove this practical physics problem, but trust me, this video will be interesting because you’ll see one of the most beautiful proofs in physics and mathematics.
+One way to think about it is by shifting each vector without changing their angle, connecting the tail of one to the head of another. They form a closed polygon, making the resultant zero. This visualisation is a beautiful way to picture why the sum is zero. But the goal of this video isn't just to give you intuition to the problem. When you dive deeper start questioning why this works for any number of vectors, you’ll find that Euler's formula, one of the most beautiful theorems in math, offers elegent proof that you might not often find in textbooks or online. It might be surprising that abstract concept like Euler’s Formula can help prove this practical physics problem, but trust me, this video will be interesting because you’ll see one of the most beautiful proofs conneting physics and math.
 
 **STARTING PROOF**
-Let’s begin by considering these vectors acting at the origin of an x-y plane. Our goal is to find the sum of all these vectors. When dealing with multiple coplanar vectors, it’s always helpful to resolve them into their x and y components.
 
-So, what does it mean to resolve a vector? It involves expressing any vector as the sum of two perpendicular components: one along the x-axis and one along the y-axis. In other words, we project the vectors onto the x and y axes.
+Let’s start by considering these vectors at the origin of an x-y plane. To keep things simple, we'll assume that each vector has a magnitude of 1. Later, I'll show that this method works for vectors of any magnitude, not just unit vectors.
 
-For a vector with magnitude ∣𝑣∣ and making an angle θ with the x-axis:
-The x-component of the vector is: ∣v∣⋅cos(θ).
-The y-component of the vector is: ∣v∣⋅sin(θ).
+We'll label the vectors from 0 to \( n-1 \).
 
-We do this for each of the vectors. This approach is really helpful because by decomposing all vectors into their x and y components, we simplify the math. We can then independently add the x-components and y-components of all vectors.
+For each vector \( k \), we can describe its components using unit vectors along the x-axis and y-axis, known as \(\hat{i}\) and \(\hat{j}\), respectively.
 
-Let's apply this to our problem. For simplicity, we'll assume that each vector has a magnitude of 1. Later, I'll show that if this works for unit vectors, it will also work for vectors of any magnitude
-
-We'll number the vectors from 0 to n-1. Each vector is evenly spaced around the circle, so the angle between consecutive vectors is $$\frac{2\pi}{n}$$. To find the x and y components of each vector, we need to determine the angle each vector makes with the x-axis.
-
-  -The 0th vector is along the x-axis, so it makes an angle of \(0\) radians with the x-axis.
-  -The 1st vector makes an angle of \(\frac{2\pi}{n}\) radians with the x-axis.
-  -The 2nd vector makes an angle of \(\frac{4\pi}{n}\) radians with the x-axis.
-  -The 3rd vector makes an angle of \(\frac{6\pi}{n}\) radians with the x-axis.
-
-Following this pattern, the k-th vector makes an angle of $$\frac{2k\pi}{n}$$ radians with the x-axis.
-
-For each vector k, the x and y components can be calculated using:
-\begin{align*}
-    \text{x-component} &= \cos\left(\frac{2k\pi}{n}\right) \\
-    \text{y-component} &= \sin\left(\frac{2k\pi}{n}\right)
-\end{align*}
-
-\subsection*{Sum of x-Components}
-
-To find the total x-component of all vectors, we sum up the x-components of each vector:
+For the k-th vector, which has a magnitude of 1 and makes an angle \(\theta_k\) with the x-axis, the components are:
 
 \[
-\text{Total x-component} = \sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right)
+\text{x-component} = \cos\left(\theta_k\right) \hat{i}
 \]
-
-\subsection*{Sum of y-Components}
-
-Similarly, the total y-component is:
 
 \[
-\text{Total y-component} = \sum_{k=0}^{n-1} \sin\left(\frac{2k\pi}{n}\right)
+\text{y-component} = \sin\left(\theta_k\right) \hat{j}
 \]
 
-.
-.
+Here, x-component represents the projection of the vector along the x-axis, scaled by the cosine of the angle \(\theta_k\). Similarly, the y-component represents the projection along the y-axis, scaled by the sine of the angle.
 
-For those who don't know what Euler’s formula is, I would recommend watching my 
-previous video in this playlist. For now, I am going to give a brief intro to 
-what it is. You can picture a point in a unit circle in a complex plane, and 
-represent it as a vector making angle with the x-axis. This vector can be 
-expressed in the exponential form as, which equals.
+Decomposing a vector into these components allows us to analyze its influence in both the horizontal (x) and vertical (y) directions. The unit vectors \(\hat{i}\) and \(\hat{j}\) ensure we correctly associate each component with its respective axis.
 
-Now, let's imagine there are vectors around this circle. We can represent each 
-of these vectors in exponential form and sum them all to find the result. So, to 
-represent it in exponential form we need to know what angles each of these 
-vectors make with the x-axis. Let's number these vectors from to. The th vector 
-makes angle, the st makes, the nd makes, and so on. The, and so on. The th 
-vector makes an angle. 
+The k-th vector can thus be written as the sum of these components:
 
-So, the th vector is. Summing both sides, we get:
+\[
+\text{Vector}_k = \cos\left(\theta_k\right) \hat{i} + \sin\left(\theta_k\right) \hat{j}
+\]
 
-Summing those trigonometric functions can be tedious. So, we express them in 
-exponential form using Euler’s formula. It becomes:
+This approach is useful because it lets us sum the vectors by adding their x-components and y-components separately, simplifying the calculation of the resultant vector.
+
+Now, the angle \(\theta_k\) can be expressed as a function of the vector number \( k \), for each vector. Since each vector is evenly spaced around a circle, the angle between consecutive vectors is \(\frac{2\pi}{n}\):
+
+- The 0th vector aligns with the x-axis, making an angle of \(0\) radians.
+- The 1st vector makes an angle of \(\frac{2\pi}{n}\) radians with the x-axis.
+- The 2nd vector makes an angle of \(\frac{2\cdot2\pi}{n}\) radians with the x-axis.
+- The 3rd vector makes an angle of \(\frac{2\cdot3\pi}{n}\) radians with the x-axis.
+
+Following this pattern, the k-th vector makes an angle of \(\frac{2k\pi}{n}\) radians with the x-axis.
+
+Substituting this expression for \(\theta_k\) into our vector expression, we get:
+
+\[
+\text{Vector}_k = \cos\left(\frac{2k\pi}{n}\right) \hat{i} + \sin\left(\frac{2k\pi}{n}\right) \hat{j}
+\]
+
+Now, to find the total vector sum, we add up all the vectors from \( k = 0 \) to \( n - 1 \). The total vector sum is:
+
+\[
+\sum_{k=0}^{n-1} \text{Vector}_k = \sum_{k=0}^{n-1} \left(\cos\left(\frac{2k\pi}{n}\right) \hat{i} + \sin\left(\frac{2k\pi}{n}\right) \hat{j}\right)
+\]
+
+Breaking this down into x and y components, we have:
+
+\[
+\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) \hat{i} + \sum_{k=0}^{n-1} \sin\left(\frac{2k\pi}{n}\right) \hat{j}
+\]
+
+Thus, the sum of all the vectors is the sum of the x-components plus the sum of the y-components. This decomposition simplifies the process of finding the resultant vector.
+
+To prove that the vector sum is zero, we need to show that both the x and y components sum to zero simultaneously. That is, we need to prove:
+
+\[
+\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) = 0 \quad \text{and} \quad \sum_{k=0}^{n-1} \sin\left(\frac{2k\pi}{n}\right) = 0
+\]
+
+This is a sub-problem within our original question, and directly proving these sums are zero using trigonometric identities can be complex. Here, Euler's formula provides an elegant solution.
+
+I'm not going into the details of Euler's formula, as I've explained it in my previous videos in this playlist. For now, I'll give a brief introduction. According to Euler's formula:
+
+\[
+e^{i\theta} = \cos(\theta) + i\sin(\theta)
+\]
+
+In this context, we use Euler's formula to represent vectors in the complex plane, where the real part corresponds to the x-component and the imaginary part corresponds to the y-component. According to Euler's formula, these vectors can be represented in exponential form:
+
+\[
+e^{i\frac{2k\pi}{n}} = \cos\left(\frac{2k\pi}{n}\right) + i\sin\left(\frac{2k\pi}{n}\right)
+\]
+
+
+Thus, the sum of all vectors is:
+
+\[
+\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}}
+\]
+
+If we can prove that the sum of these exponentials is zero, i.e.,
+
+\[
+\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}} = 0
+\]
+
+then both its real and imaginary parts must also be zero. This would imply:
+
+\[
+\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) = 0 \quad \text{and} \quad \sum_{k=0}^{n-1} \sin\left(\frac{2k\pi}{n}\right) = 0
+\]
+
+Thus, the x and y components of the vectors sum to zero, resulting in a zero resultant vector.
+
+Without any further delay, lets move on to our final proof. so our vector sum of vk can be epxressed as this exponential sum.
 
 If we expand the summation, we get:
+$$ \sum_{k=0}^{n-1} v_k = 1 + e^{i \frac{2\pi}{n}} + e^{i \frac{4\pi}{n}} + \ldots + e^{i \frac{2(n-1)\pi}{n}}. $$
 
-This is a geometric series. To sum a geometric series, we use the formula for 
-the sum of a geometric series. Notice that is common in all terms. Let's assume 
-for simplicity. Our series now simplifies to:
+This is a geometric series. To sum a geometric series, we use the formula for the sum of a geometric series. Notice that $$ e^{i \frac{2\pi}{n}} $$ is common in all terms. Let's assume $$\( e^{i \frac{2\pi}{n}} = x \)$$ for simplicity. Our series now simplifies to:
+
+$$ 1 + x + x^2 + x^3 + \ldots + x^{n-1}. $$
 
 The sum of this geometric series is given by:
 
-Since, replacing x in the formula, we get. We know that:
+$$ \frac{1-x^n}{1-x}. $$
+
+Since $$ x = e^{i \frac{2\pi}{n}}$$, replacing x in the formula, we get  $$e^{i 2\pi}$$. We know that:
+
+$$ e^{i 2\pi} = \cos(2\pi) + i\sin(2\pi), $$
 
 which equals 1. Therefore, the sum reduces to:
 
-Hence, the total sum is 0. See how easy that was.
+$$ \frac{1 - 1^n}{1 - 1} = 0. $$
 
-Now let's talk about why this idea matters in the real world. Fans and Turbines: 
-The blades of fans and turbines are often placed 120 degrees apart. This design 
-ensures that the forces on the central axis are balanced, resulting in smooth 
-and efficient rotation.
+Hence, the total sum is 0.
 
-Electric Motors: In three-phase electric motors, the currents are phase-shifted 
-by 120 degrees to ensure the motor runs smoothly and efficiently by balancing 
-the forces within the motor.
+This concludes our proof that the sum of the vectors is zero, using Euler's formula and the properties of geometric series. 
 
-Triangular Trusses in Bridges: The forces in a triangular truss bridge are 
-evenly distributed and balanced, which provides stability and strength to the 
-structure. This design helps in constructing stable and strong bridges that can 
-bear heavy loads without bending or collapsing.
+The beauty of this problem lies in its simplicity and the surprising depth of its solution. What initially appears as a basic vector addition problem transforms into a fascinating exploration of complex numbers, and geometric series.
+
+This problem exemplifies how abstract mathematical concepts can provide clear and elegant solutions to real-world scenarios.
+
+Whether you're here out of curiosity or for a deeper understanding, I hope you've enjoyed this exploration as much as I have. If you liked this video, don't forget to give it a thumbs up and subscribe to Math Simplified for more fascinating journeys into the world of mathematics.
+
+Thank you for watching, and until next time, keep exploring the beautiful world of math!
