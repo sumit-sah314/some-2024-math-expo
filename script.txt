@@ -1,17 +1,18 @@
 Title: This Classic Physics Problem's Beautiful Connection to Euler’s Formula Totally Blew Me Away
 
 **INTRODUCTION TO THE PROBLEM**
-You might have come across this problem in physics or math class while studying vectors. Imagine you have 𝑛 vectors of the same length, all pointing out from a central point and evenly spaced around a circle, each making an angle of 2𝜋/𝑛 radians. These vectors balance each other out perfectly, so their sum is zero.
+Alright, welcome to Math Simplified!
+Let's dive into this classic problem you might have encountered in physics or math class while studying vectors. Imagine you have 𝑛 vectors of the same length, all pointing out from a central point and evenly spaced around a circle, each making an angle of 2𝜋/𝑛 radians. These vectors balance each other out perfectly, so their sum is zero.
 
-I know throwing this type of mathematical definition of a problem doesnt seem intuitive at first. Therefore, I always find it helpful to start with some specific examples. Lets start with how and when did i first time i encountered this problem. 
+I know throwing out mathematical definition of the problem might seem a bit abstract. Therefore, I always find it helpful to start with some specific examples. Lets start with how did i first i encountered this problem. 
 
 Picture a ring with a uniform positive charge. What’s the electric field intensity at its center?
 
 Think of this ring being made up of many infinitesimal charge elements dQ. Each element creates a small electric field dE which is directed radially outward along the line connecting dQ and center. All these electric fields are of equal magnitude because of being at the same distance, evenly spaced around in a circle. The vector sum of all these electric fields is 0.
 
-When I asked my teacher why, he just said, "It's symmetry." Each charge element has an equal charge directly opposite it, so they cancel out. This makes sense for continuous distributions, but what about discrete charges? With an even number, each field has an opposite to cancel it out. With an odd number, there’s no exact opposite field to cancel out.
+When I asked my teacher why this happens, he simply said, "It's symmetry." Each charge element dQ on the ring has an equal dQ located directly opposite, canceling each other out. This explanation works well for continuous distributions. But what if we have a discrete number of charges around the circle? For an even number of charges, each electric field has an opposite field to cancel it out. But with an odd number of electric fields, there’s no exact opposite field to cancel out. So, does this balancing act still work for any number of vectors?
 
-If you're still not following, here's another example:
+If you're still not quite getting the gist of the problem, no worries, let me give you another example:
 
 Imagine a block on a frictionless surface being pulled by a force in one direction. According to Newton’s law, the block accelerates in that direction. But if you apply an equal force in the opposite direction, the forces cancel out and the block stays still. Notice our formula holds true—two forces making an angle of 𝜋.
 
@@ -21,11 +22,12 @@ Similarly, with four forces making an angle of 𝜋/2 (90 degrees), they cancel 
 
 This rule works for any number of forces—5, 6, or 7—as long as there's more than one. If there's only one force, there's nothing to balance it out. So it does not apply.
 
-How do we prove if it works for all n?
+Here's the revised version of our problem statement: If there are 𝑛 equal vectors acting at a point and making an angle of 
+2𝜋/𝑛, evenly spaced around a circle, such that n>1, then they should balance out to zero.
 
-One way to think about it is by shifting each vector without changing their angle, connecting the tail of one to the head of another. They form a closed polygon, making the resultant zero. This works well for special cases, but what about a more general proof without geometry?
+So, how do we prove this works for any number of vectors 𝑛?
 
-The main goal of me making this video isn't just give you intuition to this class problem often encountered in physics and math. When you dive deeper start questioning why this works for any number of vectors, you’ll find that Euler's formula, one of the most beautiful theorems in math, offers elegent proof that you might not often find in textbooks or online. It might be surprising that abstract concept like Euler’s Formula can help prove this practical physics problem, but trust me, this video will be interesting because you’ll see one of the most beautiful proofs in physics and mathematics.
+One way to think about it is by shifting each vector without changing their angle, connecting the tail of one to the head of another. They form a closed polygon, making the resultant zero. This visualisation is a beautiful way to picture why this is true. However, The main goal this video isn't just to give you intuition to this problem. When you dive deeper start questioning why this works for any number of vectors, you’ll find that Euler's formula, one of the most beautiful theorems in math, offers elegent proof that you might not often find in textbooks or online. It might be surprising that abstract concept like Euler’s Formula can help prove this practical physics problem, but trust me, this video will be interesting because you’ll see one of the most beautiful proofs in physics and mathematics.
 
 **STARTING PROOF**
 Let’s begin by considering these vectors acting at the origin of an x-y plane. Our goal is to find the sum of all these vectors. When dealing with multiple coplanar vectors, it’s always helpful to resolve them into their x and y components.
@@ -49,7 +51,7 @@ We'll number the vectors from 0 to n-1. Each vector is evenly spaced around the 
 
 Following this pattern, the k-th vector makes an angle of $$\frac{2k\pi}{n}$$ radians with the x-axis.
 
-For each vector \(k\), the x and y components can be calculated using:
+For each vector k, the x and y components can be calculated using:
 \begin{align*}
     \text{x-component} &= \cos\left(\frac{2k\pi}{n}\right) \\
     \text{y-component} &= \sin\left(\frac{2k\pi}{n}\right)
@@ -57,7 +59,7 @@ For each vector \(k\), the x and y components can be calculated using:
 
 \subsection*{Sum of x-Components}
 
-To find the total x-component of all vectors, sum up the x-components of each vector:
+To find the total x-component of all vectors, we sum up the x-components of each vector:
 
 \[
 \text{Total x-component} = \sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right)
