@@ -4,7 +4,7 @@ Title: This Classic Physics Problem's Beautiful Connection to Euler’s Formula 
 
 Hey there!Welcome to Math Simplified!
 
-Let's dive into this classic problem you might have encountered in physics or math class, especially while studying vectors. Imagine you have 𝑛 vectors of the same length, all pointing out from a central point and evenly spaced around a circle, each making an angle of $$\frac{2\pi}{n}$$ radians. These vectors balance each other out perfectly, so their sum is zero.
+You might have encountered this problem in physics or math class, especially while studying vectors. Imagine 𝑛 vectors of the same length, all pointing out from a central point and evenly spaced around a circle, each making an angle of $$\frac{2\pi}{n}$$ radians. These vectors balance each other out perfectly, so their sum is zero.
 
 I know throwing out the mathematical definition of the problem might seem a bit abstract. Therefore, I always find it helpful to start with some specific examples. Let's start with how I first encountered the problem in my physics class. 
 
