@@ -4,9 +4,11 @@ Title: This Classic Physics Problem's Beautiful Connection to Euler’s Formula 
 
 Hey there!Welcome to Math Simplified!
 
-You might have encountered this problem in physics or math class, especially while studying vectors. Imagine 𝑛 vectors of the same length, all pointing out from a central point and evenly spaced around a circle, each making an angle of $$\frac{2\pi}{n}$$ radians. These vectors balance each other out perfectly, so their sum is zero.
+Let's dive into this classic problem which you might have encountered in your physics or math class, especially while studying vectors. What is the sum of 𝑛 vectors of the same length, all pointing out from a central point and evenly spaced around a circle, each making an angle of $$\frac{2\pi}{n}$$ radians. You might already know that, because of their symmetrical arrangement, these vectors cancel each other out perfectly, so their sum is zero. But just saying "symmetry" doesn't really explain why the sum is zero.
 
-I know throwing out the mathematical definition of the problem might seem a bit abstract. Therefore, I always find it helpful to start with some specific examples. Let's start with how I first encountered the problem in my physics class. 
+One way to understand this is by imagining shifting each vector without changing their angle, connecting the tail of one to the head of another. They form a closed polygon, which is why the resultant is zero. It's a neat way to visualize the concept. But the point of this video isn't just to give you an intuitive feel for the problem. If you dive deeper and start asking why this works for any number of vectors, you'll find that Euler's formula, one of the most beautiful theorems in mathematics, provides an elegant proof that you might not see in your textbooks. It might seem surprising that an abstract concept like Euler’s Formula can prove something so practical in physics, but trust me, this video will be exciting because we're going to see one of the most beautiful connections between math and physics.
+
+To make this concept more concrete, let's look at a specific example. I know the mathematical definition might seem a bit abstract, so I'll start with how I first encountered this problem in my physics class.
 
 Picture a ring with a uniform positive charge. What’s the electric field intensity at its center?
 
@@ -25,7 +27,7 @@ If you're still not quite getting the gist of the problem, no worries, let me gi
 
 Imagine a block on a frictionless surface being pulled in one direction. According to Newton's laws, the block accelerates in that direction. But if you apply an equal force in the opposite direction, the forces cancel out and the block stays still. Notice our formula holds true—two forces making an angle of $$\frac{2\pi}{2}$$, which is $$\pi$$ radians.
 
-Now, let’s take it a step further. What if we have three forces, each separated by $$\frac{2\pi}{3}$$ radians? Adding these vectors can be tricky, but we use the parallelogram law of vector addition: If you consider two vectors at a point as adjacent sides of a parallelogram, the resultant is given by the diagonal.You see, the result is equal and opposite to the third force.
+Now, let’s take it a step further. What if we have three forces, each separated by $$\frac{2\pi}{3}$$ radians? Adding these vectors can be tricky, but we use the parallelogram law of vector addition: If you consider two vectors at a point as adjacent sides of a parallelogram, the resultant is given by the diagonal. You see, the result is equal and opposite to the third force.
 
 Similarly, with four forces making an angle of $$\frac{\pi}{2}$$, they cancel each other out because each force has an opposite to cancel it.
 
@@ -35,10 +37,6 @@ Here's the revised version of our problem statement: If there are 𝑛 equal vec
 $$\frac{2\pi}{n}$$, evenly spaced around a circle, such that $$n>1$$, then they should balance out to $$0$$.
 
 So, how do we prove this works for any number of vectors 𝑛?
-
-One way to think about it is by shifting each vector without changing their angle, connecting the tail of one to the head of another. They form a closed polygon, making the resultant zero. This visualization is a beautiful way to picture why the sum is zero. But the goal of this video isn't just to give you intuition for the problem. When you dive deeper and start questioning why this works for any number of vectors, you’ll find that Euler's formula, one of the most beautiful theorems in math, offers elegant proof that you might not often find in textbooks or online. It might be surprising that abstract concepts like Euler’s Formula can help prove this practical physics problem, but trust me, this video will be interesting because you’ll see one of the most beautiful proofs connecting physics and math.
-
-
 
 **STARTING PROOF**
 
