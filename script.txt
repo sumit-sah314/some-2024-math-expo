@@ -4,7 +4,7 @@ Title: This Classic Physics Problem's Beautiful Connection to Euler’s Formula 
 
 Hey there!Welcome to Math Simplified!
 
-Let's dive into this classic problem which you might have encountered in your physics or math class, especially while studying vectors. What is the sum of 𝑛 vectors of the same length, all pointing out from a central point and evenly spaced around a circle, each making an angle of $$\frac{2\pi}{n}$$ radians. You might already know that, because of their symmetrical arrangement, these vectors cancel each other out perfectly, so their sum is zero. But just saying "symmetry" doesn't really explain why the sum is zero.
+Let's dive into this classic problem which you might have encountered in your physics or math class, especially while studying vectors. Imagine 𝑛 vectors of the same length, all pointing out from a central point and evenly spaced around a circle, each making an angle of $$\frac{2\pi}{n}$$ radians. What is the resultant or sum of all these vectors? You might already know that, because of their symmetrical arrangement, these vectors cancel each other out perfectly, so their sum is zero. But just saying "symmetry" doesn't really explain why the sum is zero.
 
 One way to understand this is by imagining shifting each vector without changing their angle, connecting the tail of one to the head of another. They form a closed polygon, which is why the resultant is zero. It's a neat way to visualize the concept. But the point of this video isn't just to give you an intuitive feel for the problem. If you dive deeper and start asking why this works for any number of vectors, you'll find that Euler's formula, one of the most beautiful theorems in mathematics, provides an elegant proof that you might not see in your textbooks. It might seem surprising that an abstract concept like Euler’s Formula can prove something so practical in physics, but trust me, this video will be exciting because we're going to see one of the most beautiful connections between math and physics.
 
@@ -40,29 +40,19 @@ So, how do we prove this works for any number of vectors 𝑛?
 
 **STARTING PROOF**
 
-Let’s start by considering these vectors at the origin of an x-y plane. To keep things simple, we'll assume that each vector has a magnitude of 1. Later, I'll show that this method works for vectors of any magnitude, not just unit vectors.
+Let’s start by considering these vectors at the origin of an x-y plane. To keep things simple, we'll assume that each vector has a magnitude of 1.
 
-We'll label the vectors from 0 to $$n-1$$.
+Let's assign numbers to these vectors from 0 to $$n-1$$. We'll assume, 𝑘 represents the index of each vector, ranging from 0 to n-1. For each vector 𝑘, we can describe its components using unit vectors along the x-axis and y-axis.Here, the x-component represents the projection of the vector along the x-axis, scaled by the cosine of the angle it makes with the x-axis $$\theta_k$$. 
+             
+                $$\text{x-component} = \cos\left(\theta_k\right) \hat{i}$$
 
-For each vector $$k$$, we can describe its components using unit vectors along the x-axis and y-axis, known as $$\hat{i}$$ and $$\hat{j}$$, respectively.
-
-For the k-th vector, which has a magnitude of 1 and makes an angle $$\theta_k$$ with the x-axis, the components are:
-
-             $$\text{x-component} = \cos\left(\theta_k\right) \hat{j}$$
+Similarly, the y-component represents the projection along the y-axis, scaled by the sine of the angle.
 
              $$\text{y-component} = \sin\left(\theta_k\right) \hat{j}$$
 
-Here, the x-component represents the projection of the vector along the x-axis, scaled by the cosine of the angle $$\theta_k$$. Similarly, the y-component represents the projection along the y-axis, scaled by the sine of the angle.
+Decomposing a vector into these components is useful because it lets us sum the vectors by adding their x-components and y-components separately, simplifying the calculation of the resultant vector.
 
-Decomposing a vector into these components allows us to analyze its influence in both the horizontal (x) and vertical (y) directions. The unit vectors $$\hat{i}$$ and $$\hat{j}$$ ensure we correctly associate each component with its respective axis.
-
-The k-th vector can thus be written as the sum of these components:
-
-                  $$\vec{\text{v}}_k = \cos\left(\theta_k\right) \hat{i} + \sin\left(\theta_k\right) \hat{j}$$
-
-This approach is useful because it lets us sum the vectors by adding their x-components and y-components separately, simplifying the calculation of the resultant vector.
-
-Now, the angle $$\theta_k$$ can be expressed as a function of the vector number $$k$$, for each vector. Since each vector is evenly spaced around a circle, the angle between consecutive vectors is $$\frac{2\pi}{n}$$:
+Here, the angle $$\theta_k$$ can be expressed as a function of the vector index $$k$$, for each vector. Since each vector is evenly spaced around a circle, the angle between consecutive vectors is $$\frac{2\pi}{n}$$:
 
 The 0th vector aligns with the x-axis, making an angle of $$0$$ radians.
 The 1st vector makes an angle of $$\frac{2\pi}{n}$$ radians with the x-axis.
@@ -75,7 +65,11 @@ Substituting this expression for $$\theta_k$$ into our vector expression, we get
 
 $$\vec{\text{v}}_k = \cos\left(\frac{2k\pi}{n}\right) \hat{i} + \sin\left(\frac{2k\pi}{n}\right) \hat{j}$$
 
-Now, to find the total vector sum, we add up all the vectors from \( k = 0 \) to \( n - 1 \). The total vector sum is:
+The k-th vector, represented by $$v_k$$ can thus be written as the sum of these components:
+
+              $$\vec{\text{v}}_k = \cos\left(\theta_k\right) \hat{i} + \sin\left(\theta_k\right) \hat{j}$$
+
+Now, to find the total vector sum, we add up all the vectors from $$k = 0$$ to $$n - 1$$. The total vector sum is:
 
 $$\sum_{k=0}^{n-1} \vec{\text{v}}_k = \sum_{k=0}^{n-1} \left(\cos\left(\frac{2k\pi}{n}\right) \hat{i} + \sin\left(\frac{2k\pi}{n}\right) \hat{j}\right)$$
 
