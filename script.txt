@@ -79,20 +79,19 @@ $$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) \hat{i} + \sum_{k=0}^{n-1} \
 
 Thus, the sum of all the vectors is the sum of the x-components plus the sum of the y-components. This decomposition simplifies the process of finding the resultant vector.
 
-To prove that the vector sum is zero, we need to show that both sum of the x and y components sum to zero simultaneously. That is, we need to prove:
+To prove that the vector sum is zero, we need to show that both the sum of the x and y components sum to zero simultaneously. That is, we need to prove:
 
 $$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) = 0 \quad \text{and} \quad \sum_{k=0}^{n-1} \sin\left(\frac{2k\pi}{n}\right) = 0$$
 
-This is a sub-problem within our original question, and directly proving these sums are zero using trigonometric identities can be complex. Here, Euler's formula provides an elegant solution.
+This is a sub-problem within our original question, and directly proving these sums are zero using trigonometric identities can be complex and tedious. Here, Euler's formula provides an elegant solution.
 
-I'm not going into the details of Euler's formula, as I've explained it in my previous videos in this playlist. For now, I'll give a brief introduction. According to Euler's formula:
+If you have clicked this video, you must have some idea of Euler's Formula. I'm not going into the details of Euler's formula, as I've explained it in my previous videos in this playlist. For now, I'll give a brief introduction. If you imagine a point in a complex plane unit distance from the origin making an angle \(\theta\) with the x-axis, it's a complex number with real part \(\cos(\theta)\) and imaginary part \(\sin(\theta)\). According to Euler's formula, it can also be represented in exponential form:
 
-                                                      $$e^{i\theta} = \cos(\theta) + i\sin(\theta)$$
+$$e^{i\theta} = \cos(\theta) + i\sin(\theta)$$
 
 In this context, we use Euler's formula to represent vectors in the complex plane, where the real part corresponds to the x-component and the imaginary part corresponds to the y-component. According to Euler's formula, these vectors can be represented in exponential form:
 
 $$e^{i\frac{2k\pi}{n}} = \cos\left(\frac{2k\pi}{n}\right) + i\sin\left(\frac{2k\pi}{n}\right)$$
-
 
 Thus, the sum of all vectors is:
 
@@ -108,12 +107,15 @@ $$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) = 0 \quad \text{and} \quad \
 
 Thus, the x and y components of the vectors sum to zero, resulting in a zero resultant vector.
 
-Without any further delay, let's move on to our final proof. so our vector sum of $$v_k$$ can be expressed as this exponential sum.
+Without any further delay, let's move on to our final proof. So our vector sum of \(v_k\) can be expressed as this exponential sum.
+            
+$$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}}
 
 If we expand the summation, we get:
-$$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}} = 1 + e^{i \frac{2\pi}{n}} + e^{i \frac{4\pi}{n}} + \ldots + e^{i \frac{2(n-1)\pi}{n}}. $$
 
-We’re familiar with this series: It is a geometric series. To sum a geometric series, we use the formula for the sum of a geometric series. Notice that $$ e^{i \frac{2\pi}{n}} $$ is common in all terms. Let's assume $$\( e^{i \frac{2\pi}{n}} = x \)$$ for simplicity. Our series now simplifies to:
+$$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}} = 1 + e^{i \frac{2\pi}{n}} + e^{i \frac{4\pi}{n}} + \ldots + e^{i \frac{2(n-1)\pi}{n}}.$$
+
+We’re familiar with this series, aren't we? It's a geometric series. To sum a geometric series, we use the formula for the sum of a geometric series. Notice that \( e^{i \frac{2\pi}{n}} \) is common in all terms. Let's assume \( e^{i \frac{2\pi}{n}} = x \) for simplicity. Our series now simplifies to:
 
 $$ 1 + x + x^2 + x^3 + \ldots + x^{n-1}. $$
 
@@ -121,24 +123,35 @@ The sum of this geometric series is given by:
 
 $$ \frac{1-x^n}{1-x}. $$
 
-Since $$ x = e^{i \frac{2\pi}{n}}$$, replacing x in the formula, we get  $$e^{i 2\pi}$$. We know that:
+Since \( x = e^{i \frac{2\pi}{n}} \), replacing \( x \) in the formula, we get \( e^{i 2\pi} \). From euler's formula:
 
 $$ e^{i 2\pi} = \cos(2\pi) + i\sin(2\pi), $$
 
 which equals 1. Therefore, the sum reduces to:
 
-$$ \frac{1 - 1^n}{1 - 1} = 0. $$
+$$ \frac{1 - 1^n}{1 - e^{\frac{2\pi}{n}} = 0. $$
 
 Hence, the total sum is 0.
 
-This concludes our proof that the sum of the vectors is zero, using Euler's formula and the properties of geometric series. 
+We can still prove this zero for vectors of any magnitude. Suppose the vectors have a magnitude of \( r \), geometrically it means all these unit vectors are scaled by a factor of \( r \). When you look at Euler's expansion, this is what it looks like:
 
-The beauty of this problem lies in its simplicity and the surprising depth of its solution. What initially appears as a basic vector addition problem transforms into a fascinating exploration of complex numbers, and geometric series.
+$$\sum_{k=0}^{n-1} r \cdot e^{i\frac{2k\pi}{n}}$$
+
+Since \( r \) is constant it can be pulled out of the summation:
+
+$$r \cdot \sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}}$$
+
+We already proved what this summation is: 0
+
+Hence, \( r \cdot 0 = 0 \).
+
+This concludes our proof that the sum of the vectors is zero, using Euler's formula and the properties of geometric series.
+
+The beauty of this problem lies in its simplicity and the surprising depth of its solution. What initially appears as a basic vector addition problem transforms into a fascinating exploration of complex numbers and geometric series.
 
 This problem exemplifies how abstract mathematical concepts can provide clear and elegant solutions to real-world scenarios.
 
 Whether you're here out of curiosity or for a deeper understanding, I hope you've enjoyed this exploration as much as I have. If you liked this video, don't forget to give it a thumbs up and subscribe to Math Simplified for more fascinating journeys into the world of mathematics.
 
 Thank you for watching, and until next time, keep exploring the beautiful world of math!
-
 
