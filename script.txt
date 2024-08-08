@@ -79,7 +79,7 @@ $$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) \hat{i} + \sum_{k=0}^{n-1} \
 
 Thus, the sum of all the vectors is the sum of the x-components plus the sum of the y-components. This decomposition simplifies the process of finding the resultant vector.
 
-To prove that the vector sum is zero, we need to show that both the x and y components sum to zero simultaneously. That is, we need to prove:
+To prove that the vector sum is zero, we need to show that both sum of the x and y components sum to zero simultaneously. That is, we need to prove:
 
 $$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) = 0 \quad \text{and} \quad \sum_{k=0}^{n-1} \sin\left(\frac{2k\pi}{n}\right) = 0$$
 
