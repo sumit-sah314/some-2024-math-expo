@@ -4,9 +4,13 @@ Title: This Classic Physics Problem's Beautiful Connection to Euler’s Formula 
 
 Hey there!Welcome to Math Simplified!
 
-Let's dive into this classic problem which you might have encountered in your physics or math class, especially while studying vectors. Imagine 𝑛 vectors of the same length, all pointing out from a central point and evenly spaced around a circle, each making an angle of $$\frac{2\pi}{n}$$ radians. What is the resultant or sum of all these vectors? You might already know that, because of their symmetrical arrangement, these vectors cancel each other out perfectly, so their sum is zero. But just saying "symmetry" doesn't really explain why the sum is zero.
+Let’s dive into this classic problem that you’ve probably seen in your physics or math class, especially when dealing with vectors. Picture this: you have 𝑛 vectors, all of the same length, spreading out from a central point and evenly spaced around a circle. Each one makes an angle of $$\frac{2\pi}{n}$$ radians with the next. The big question is: what’s the resultant sum of all these vectors?
 
-One way to understand this is by imagining shifting each vector without changing their angle, connecting the tail of one to the head of another. They form a closed polygon, which is why the resultant is zero. It's a neat way to visualize the concept. But the point of this video isn't just to give you an intuitive feel for the problem. If you dive deeper and start asking why this works for any number of vectors, you'll find that Euler's formula, one of the most beautiful theorems in mathematics, provides an elegant proof that you might not see in your textbooks. It might seem surprising that an abstract concept like Euler’s Formula can prove something so practical in physics, but trust me, this video will be exciting because we're going to see one of the most beautiful connections between math and physics.
+You might already know that because of their symmetrical arrangement, these vectors perfectly cancel each other out, resulting in a sum of zero. But just saying "symmetry" doesn't really give us a full explanation of why the sum is zero. Let’s break it down and see what’s really going on here.
+
+One way to get a better grasp of this is by picturing the vectors being shifted, without changing their angles, so that the tail of one connects to the head of another. When you do this, they form a closed polygon, which is why the resultant sum is zero. It’s a cool way to visualize the concept. But the goal of this video isn’t just to give you a feel for the problem. If you dig a little deeper and start asking why this works for any number of vectors, you’ll discover that Euler’s formula—one of the most beautiful theorems in mathematics—offers an elegant proof that you might not see in your textbooks.
+
+It might seem surprising that such an abstract concept like Euler’s Formula can prove something so practical in physics, but trust me, this video is going to be exciting. We’re about to explore one of the most beautiful connections between math and physics.
 
 To make this concept more concrete, let's look at a specific example. I know the mathematical definition might seem a bit abstract, so I'll start with how I first encountered this problem in my physics class.
 
@@ -19,15 +23,17 @@ where $$k_e$$ is Coulomb's constant, $$|dQ|$$ is the magnitude of the charge ele
 
 The magnitude of the electric field depends on the amount of charge $$dQ$$ and the distance $$r$$ from the charge. Since we are considering a uniformly charged ring, each element $$dQ$$ has the same charge because the charge is evenly distributed along the entire ring. Additionally, because all these elements are equidistant from the center, being part of a circle, the electric fields they produce are of equal magnitude.
 
-The vector sum of all these electric fields is zero.
+The vector sum of all these electric fields turns out to be zero.
 
-When I asked my teacher why this happens, he simply said, "It's symmetry." Each charge element $$dQ$$ on the ring has an equal $$dQ$$ located directly opposite, canceling each other out. This explanation works well for continuous distributions. But what if we have a discrete number of charges around the circle? For an even number of charges, each electric field has an opposite field to cancel it out. But with an odd number of electric fields, there's no exact opposite field to cancel out. So, does this balancing act still work for any number of vectors?
+When I asked my teacher why this happens, he simply said, "It's symmetry." Each charge element $$dQ$$ on the ring has an equal $$dQ$$ located directly opposite, canceling each other out. This symmetry explanation works well for continuous charge distributions. But what happens if we’re dealing with a discrete number of charges around the circle?
+
+With an even number of charges, it’s easy to see that each electric field has an exact opposite to cancel it out. But what if there’s an odd number of charges? There’s no exact opposite field to cancel out each one. So, does this balancing act still hold for any number of vectors?
 
 If you're still not quite getting the gist of the problem, no worries, let me give you another example:
 
-Imagine a block on a frictionless surface being pulled in one direction. According to Newton's laws, the block accelerates in that direction. But if you apply an equal force in the opposite direction, the forces cancel out and the block stays still. Notice our formula holds true—two forces making an angle of $$\frac{2\pi}{2}$$, which is $$\pi$$ radians.
+Imagine a block on a frictionless surface being pulled in one direction. According to Newton's laws, the block accelerates in that direction. But if you apply an equal force in the opposite direction, the forces cancel out and the block stays still. Notice how our formula holds true——two forces making an angle of $$\frac{2\pi}{2}$$, which is $$\pi$$ radians.
 
-Now, let’s take it a step further. What if we have three forces, each separated by $$\frac{2\pi}{3}$$ radians? Adding these vectors can be tricky, but we use the parallelogram law of vector addition: If you consider two vectors at a point as adjacent sides of a parallelogram, the resultant is given by the diagonal. You see, the result is equal and opposite to the third force.
+Now, let’s take it a step further. What if we have three forces, each separated by $$\frac{2\pi}{3}$$ radians? Adding these vectors can be a bit tricky, but we can use the parallelogram law of vector addition: if you think of two vectors at a point as adjacent sides of a parallelogram, the resultant is given by the diagonal. In this case, you’ll see that the resultant is equal and opposite to the third force.
 
 Similarly, with four forces making an angle of $$\frac{\pi}{2}$$, they cancel each other out because each force has an opposite to cancel it.
 
@@ -83,21 +89,21 @@ To prove that the vector sum is zero, we need to show that both the sum of the x
 
 $$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) = 0 \quad \text{and} \quad \sum_{k=0}^{n-1} \sin\left(\frac{2k\pi}{n}\right) = 0$$
 
-This is a sub-problem within our original question, and directly proving these sums are zero using trigonometric identities can be complex and tedious. Here, Euler's formula provides an elegant solution.
+This is a sub-problem within our original problem, and directly proving these sums are zero using trigonometric identities can be complex and tedious. Here, Euler's formula provides an elegant solution.
 
-If you have clicked this video, you must have some idea of Euler's Formula. I'm not going into the details of Euler's formula, as I've explained it in my previous videos in this playlist. For now, I'll give a brief introduction. If you imagine a point in a complex plane unit distance from the origin making an angle \(\theta\) with the x-axis, it's a complex number with real part \(\cos(\theta)\) and imaginary part \(\sin(\theta)\). According to Euler's formula, it can also be represented in exponential form:
+If you clicked on this video, you probably already have a basic understanding of Euler's Formula. I won’t dive deep into the details since I’ve covered it in my earlier videos in this playlist. For now, let me give you a quick overview. Picture a point in a complex plane that is a unit distance away from the origin making an angle $$\theta$$ with the x-axis. It represent a complex number with real part $$\cos(\theta)$$ and imaginary part $$\sin(\theta)$$. According to Euler's Formula, this complex number can also be written in an exponential form:
 
 $$e^{i\theta} = \cos(\theta) + i\sin(\theta)$$
 
-In this context, we use Euler's formula to represent vectors in the complex plane, where the real part corresponds to the x-component and the imaginary part corresponds to the y-component. According to Euler's formula, these vectors can be represented in exponential form:
+In this context, we are going to shift these vectors into the complex plane. Here each vector can be represented as a comlex number, where the real part $$\cos{2k\pi}{n}$$ corresponds to the x-component and the imaginary part $$\sin{2k\pi}{n}$$corresponds to the y-component. Thanks to Euler's Formula, these vectors can also be written in an exponential form:
 
 $$e^{i\frac{2k\pi}{n}} = \cos\left(\frac{2k\pi}{n}\right) + i\sin\left(\frac{2k\pi}{n}\right)$$
 
-Thus, the sum of all vectors is:
+So, the sum of all these vectors is:
 
 $$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}} = \sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) + i\sum_{k=0}^{n-1} \sin\left(\frac{2k\pi}{n}\right)$$
 
-If we can prove that the sum of these exponents is zero, i.e.,
+If we can somehow prove that the sum of these exponents is zero, i.e.,
 
 $$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}} = 0$$
 
@@ -105,17 +111,17 @@ then both its real and imaginary parts must also be zero. This would imply:
 
 $$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) = 0 \quad \text{and} \quad \sum_{k=0}^{n-1} \sin\left(\frac{2k\pi}{n}\right) = 0$$
 
-Thus, the x and y components of the vectors sum to zero, resulting in a zero resultant vector.
+The sum of x and y components of the vectors is zero, resulting in a null or zero vector.
 
-Without any further delay, let's move on to our final proof. So our vector sum of \(v_k\) can be expressed as this exponential sum.
+Alright, let’s jump right into our final proof. Let’s take another look at this exponential representation of the vector sum.
             
 $$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}}
 
-If we expand the summation, we get:
+When we expand this summation, it looks like this:
 
 $$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}} = 1 + e^{i \frac{2\pi}{n}} + e^{i \frac{4\pi}{n}} + \ldots + e^{i \frac{2(n-1)\pi}{n}}.$$
 
-We’re familiar with this series, aren't we? It's a geometric series. To sum a geometric series, we use the formula for the sum of a geometric series. Notice that \( e^{i \frac{2\pi}{n}} \) is common in all terms. Let's assume \( e^{i \frac{2\pi}{n}} = x \) for simplicity. Our series now simplifies to:
+This should look familiar—it’s a geometric series! To sum up a geometric series, we use a specific formula. Notice that \( e^{i \frac{2\pi}{n}} \) is common in all terms, , so let’s make things simpler by setting $$e^{i \frac{2\pi}{n}} = x$$. Now, our series looks like this:
 
 $$ 1 + x + x^2 + x^3 + \ldots + x^{n-1}. $$
 
@@ -123,35 +129,38 @@ The sum of this geometric series is given by:
 
 $$ \frac{1-x^n}{1-x}. $$
 
-Since \( x = e^{i \frac{2\pi}{n}} \), replacing \( x \) in the formula, we get \( e^{i 2\pi} \). From euler's formula:
+Since $$ x = e^{i \frac{2\pi}{n}}$$, replacing $$x$$ in the formula, we get:
+$$ \frac{1-e^{2k\pi}{1-e^{\frac{2kpi}{n}$$
+
+And from euler's formula, we know:
 
 $$ e^{i 2\pi} = \cos(2\pi) + i\sin(2\pi), $$
 
-which equals 1. Therefore, the sum reduces to:
+which equals 1. So, the sum simplifies to:
 
 $$ \frac{1 - 1^n}{1 - e^{\frac{2\pi}{n}} = 0. $$
 
-Hence, the total sum is 0.
+So, the total sum is 0.
 
-We can still prove this zero for vectors of any magnitude. Suppose the vectors have a magnitude of \( r \), geometrically it means all these unit vectors are scaled by a factor of \( r \). When you look at Euler's expansion, this is what it looks like:
+We can still prove this zero for vectors of any magnitude. Suppose the vectors have a magnitude of $$r$$, geometrically it means all these unit vectors are scaled by a factor of $$r$$. When you look at Euler's expression for these vectors, this is what it looks like:
 
 $$\sum_{k=0}^{n-1} r \cdot e^{i\frac{2k\pi}{n}}$$
 
-Since \( r \) is constant it can be pulled out of the summation:
+Since $$r$$ is constant, we can pull it out of the summation:
 
 $$r \cdot \sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}}$$
 
 We already proved what this summation is: 0
 
-Hence, \( r \cdot 0 = 0 \).
+Hence, $$r \cdot 0 = 0 $$.
 
-This concludes our proof that the sum of the vectors is zero, using Euler's formula and the properties of geometric series.
+And that wraps up our proof that the sum of the vectors is zero, using Euler's formula and the properties of geometric series.
 
-The beauty of this problem lies in its simplicity and the surprising depth of its solution. What initially appears as a basic vector addition problem transforms into a fascinating exploration of complex numbers and geometric series.
+The cool thing about this problem is how simple it seems at first, yet the solution has so much depth. What starts off as a basic vector addition puzzle turns into an exciting dive into complex numbers and geometric series.
 
-This problem exemplifies how abstract mathematical concepts can provide clear and elegant solutions to real-world scenarios.
+This really shows how abstract math concepts can give us such clear and elegant solutions to real-world problems.
 
-Whether you're here out of curiosity or for a deeper understanding, I hope you've enjoyed this exploration as much as I have. If you liked this video, don't forget to give it a thumbs up and subscribe to Math Simplified for more fascinating journeys into the world of mathematics.
+Whether you’re here out of curiosity or to dig deeper, I hope you enjoyed this journey as much as I did. If you liked this video, make sure to hit that thumbs up and subscribe to Math Simplified for more awesome math adventures.
 
-Thank you for watching, and until next time, keep exploring the beautiful world of math!
+Thanks for watching, and until next time, keep exploring the amazing world of math!
 
