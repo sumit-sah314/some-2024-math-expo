@@ -83,7 +83,7 @@ Now, to find the total vector sum, we add up all the vectors from $$k = 0$$ to $
 
 Breaking this down into x and y components, we have:
 
-                $$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) \hat{i} + \sum_{k=0}^{n-1} \sin\left(\frac{2k\pi} 
+               $$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) \hat{i} + \sum_{k=0}^{n-1} \sin\left(\frac{2k\pi} 
                 {n}\right) \hat{j}$$
 
 Thus, the sum of all the vectors is the sum of the x-components plus the sum of the y-components. This decomposition simplifies the process of finding the resultant vector.
@@ -126,15 +126,15 @@ Alright, let’s jump right into our final proof. Let’s take another look at t
 When we expand this summation, it looks like this:
 
                     $$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}} = 1 + e^{i \frac{2\pi}{n}} + e^{i \frac{4\pi}{n}} + \ldots + 
-                       e^{i \frac{2(n-1)\pi}{n}}.$$
+                       e^{i \frac{2(n-1)\pi}{n}}$$
 
-This should look familiar—it’s a geometric series! To sum up a geometric series, we use a specific formula. Notice that \( e^{i \frac{2\pi}{n}} \) is common in all terms, , so let’s make things simpler by setting $$e^{i \frac{2\pi}{n}} = x$$. Now, our series looks like this:
+Notice that \( e^{i \frac{2\pi}{n}} \) is common in all terms, , so let’s make things simpler by setting $$e^{i \frac{2\pi}{n}} = x$$. Now, our series looks like this:
 
-                         $$ 1 + x + x^2 + x^3 + \ldots + x^{n-1}. $$
+                         $$ 1 + x + x^2 + x^3 + \ldots + x^{n-1}$$
 
-The sum of this geometric series is given by:
+This should look familiar—it’s a geometric series! To sum up a geometric series, we use a specific formula. The sum of this geometric series is given by:
 
-                          $$ \frac{1-x^n}{1-x}. $$
+                          $$ \frac{1-x^n}{1-x} $$
 
 Since $$ x = e^{i \frac{2\pi}{n}}$$, replacing $$x$$ in the formula, we get:
 
