@@ -17,7 +17,8 @@ To make this concept more concrete, let's look at a specific example. I know the
 Picture a ring with a uniform positive charge. What’s the electric field intensity at its center?
 
 Think of this ring as being made up of many infinitesimal charge elements dQ. Each element creates a small electric field dE, which is directed radially outward along the line connecting dQ and the center of the ring. According to Coulomb's law, the magnitude of this electric field is given by:
-$$|dE| = \frac{k_e \cdot |dQ|}{r^2}$$
+
+                              $$|dE| = \frac{k_e \cdot |dQ|}{r^2}$$
 
 where $$k_e$$ is Coulomb's constant, $$|dQ|$$ is the magnitude of the charge element, and $$r$$  is the distance from the charge to the point where the field is being calculated—in this case, the center of the ring.
 
@@ -54,22 +55,22 @@ Let's assign numbers to these vectors from 0 to $$n-1$$. We'll assume, 𝑘 repr
 
 Similarly, the y-component represents the projection along the y-axis, scaled by the sine of the angle.
 
-             $$\text{y-component} = \sin\left(\theta_k\right) \hat{j}$$
+                $$\text{y-component} = \sin\left(\theta_k\right) \hat{j}$$
 
 Decomposing a vector into these components is useful because it lets us sum the vectors by adding their x-components and y-components separately, simplifying the calculation of the resultant vector.
 
 Here, the angle $$\theta_k$$ can be expressed as a function of the vector index $$k$$, for each vector. Since each vector is evenly spaced around a circle, the angle between consecutive vectors is $$\frac{2\pi}{n}$$:
 
-The 0th vector aligns with the x-axis, making an angle of $$0$$ radians.
-The 1st vector makes an angle of $$\frac{2\pi}{n}$$ radians with the x-axis.
-The 2nd vector makes an angle of $$\frac{2\cdot2\pi}{n}$$ radians with the x-axis.
-The 3rd vector makes an angle of $$\frac{2\cdot3\pi}{n}$$ radians with the x-axis.
+        The 0th vector aligns with the x-axis, making an angle of $$0$$ radians.
+        The 1st vector makes an angle of $$\frac{2\pi}{n}$$ radians with the x-axis.
+        The 2nd vector makes an angle of $$\frac{2\cdot2\pi}{n}$$ radians with the x-axis.
+        The 3rd vector makes an angle of $$\frac{2\cdot3\pi}{n}$$ radians with the x-axis.
 
 Following this pattern, the $$k_th$$ vector makes an angle of $$\frac{2k\pi}{n}$$ radians with the x-axis.
 
 Substituting this expression for $$\theta_k$$ into our vector expression, we get:
 
-$$\vec{\text{v}}_k = \cos\left(\frac{2k\pi}{n}\right) \hat{i} + \sin\left(\frac{2k\pi}{n}\right) \hat{j}$$
+              $$\vec{\text{v}}_k = \cos\left(\frac{2k\pi}{n}\right) \hat{i} + \sin\left(\frac{2k\pi}{n}\right) \hat{j}$$
 
 The k-th vector, represented by $$v_k$$ can thus be written as the sum of these components:
 
@@ -77,78 +78,85 @@ The k-th vector, represented by $$v_k$$ can thus be written as the sum of these 
 
 Now, to find the total vector sum, we add up all the vectors from $$k = 0$$ to $$n - 1$$. The total vector sum is:
 
-$$\sum_{k=0}^{n-1} \vec{\text{v}}_k = \sum_{k=0}^{n-1} \left(\cos\left(\frac{2k\pi}{n}\right) \hat{i} + \sin\left(\frac{2k\pi}{n}\right) \hat{j}\right)$$
+               $$\sum_{k=0}^{n-1} \vec{\text{v}}_k = \sum_{k=0}^{n-1} \left(\cos\left(\frac{2k\pi}{n}\right) \hat{i} + 
+               \sin\left(\frac{2k\pi}{n}\right) \hat{j}\right)$$
 
 Breaking this down into x and y components, we have:
 
-$$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) \hat{i} + \sum_{k=0}^{n-1} \sin\left(\frac{2k\pi}{n}\right) \hat{j}$$
+                $$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) \hat{i} + \sum_{k=0}^{n-1} \sin\left(\frac{2k\pi} 
+                {n}\right) \hat{j}$$
 
 Thus, the sum of all the vectors is the sum of the x-components plus the sum of the y-components. This decomposition simplifies the process of finding the resultant vector.
 
 To prove that the vector sum is zero, we need to show that both the sum of the x and y components sum to zero simultaneously. That is, we need to prove:
 
-$$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) = 0 \quad \text{and} \quad \sum_{k=0}^{n-1} \sin\left(\frac{2k\pi}{n}\right) = 0$$
+                 $$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) = 0 \quad \text{and} \quad \sum_{k=0}^{n-1} 
+                    \sin\left(\frac{2k\pi}{n}\right) = 0$$
 
 This is a sub-problem within our original problem, and directly proving these sums are zero using trigonometric identities can be complex and tedious. Here, Euler's formula provides an elegant solution.
 
 If you clicked on this video, you probably already have a basic understanding of Euler's Formula. I won’t dive deep into the details since I’ve covered it in my earlier videos in this playlist. For now, let me give you a quick overview. Picture a point in a complex plane that is a unit distance away from the origin making an angle $$\theta$$ with the x-axis. It represent a complex number with real part $$\cos(\theta)$$ and imaginary part $$\sin(\theta)$$. According to Euler's Formula, this complex number can also be written in an exponential form:
 
-$$e^{i\theta} = \cos(\theta) + i\sin(\theta)$$
+                   $$e^{i\theta} = \cos(\theta) + i\sin(\theta)$$
 
 In this context, we are going to shift these vectors into the complex plane. Here each vector can be represented as a comlex number, where the real part $$\cos{2k\pi}{n}$$ corresponds to the x-component and the imaginary part $$\sin{2k\pi}{n}$$corresponds to the y-component. Thanks to Euler's Formula, these vectors can also be written in an exponential form:
 
-$$e^{i\frac{2k\pi}{n}} = \cos\left(\frac{2k\pi}{n}\right) + i\sin\left(\frac{2k\pi}{n}\right)$$
+                   $$e^{i\frac{2k\pi}{n}} = \cos\left(\frac{2k\pi}{n}\right) + i\sin\left(\frac{2k\pi}{n}\right)$$
 
 So, the sum of all these vectors is:
 
-$$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}} = \sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) + i\sum_{k=0}^{n-1} \sin\left(\frac{2k\pi}{n}\right)$$
+                  $$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}} = \sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) + 
+                     i\sum_{k=0}^{n-1} \sin\left(\frac{2k\pi}{n}\right)$$
 
 If we can somehow prove that the sum of these exponents is zero, i.e.,
 
-$$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}} = 0$$
+                   $$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}} = 0$$
 
 then both its real and imaginary parts must also be zero. This would imply:
 
-$$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) = 0 \quad \text{and} \quad \sum_{k=0}^{n-1} \sin\left(\frac{2k\pi}{n}\right) = 0$$
+                  $$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) = 0 \quad \text{and} \quad \sum_{k=0}^{n-1} 
+                     \sin\left(\frac{2k\pi}{n}\right) = 0$$
 
 The sum of x and y components of the vectors is zero, resulting in a null or zero vector.
 
 Alright, let’s jump right into our final proof. Let’s take another look at this exponential representation of the vector sum.
             
-$$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}}
+                    $$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}}
 
 When we expand this summation, it looks like this:
 
-$$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}} = 1 + e^{i \frac{2\pi}{n}} + e^{i \frac{4\pi}{n}} + \ldots + e^{i \frac{2(n-1)\pi}{n}}.$$
+                    $$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}} = 1 + e^{i \frac{2\pi}{n}} + e^{i \frac{4\pi}{n}} + \ldots + 
+                       e^{i \frac{2(n-1)\pi}{n}}.$$
 
 This should look familiar—it’s a geometric series! To sum up a geometric series, we use a specific formula. Notice that \( e^{i \frac{2\pi}{n}} \) is common in all terms, , so let’s make things simpler by setting $$e^{i \frac{2\pi}{n}} = x$$. Now, our series looks like this:
 
-$$ 1 + x + x^2 + x^3 + \ldots + x^{n-1}. $$
+                         $$ 1 + x + x^2 + x^3 + \ldots + x^{n-1}. $$
 
 The sum of this geometric series is given by:
 
-$$ \frac{1-x^n}{1-x}. $$
+                          $$ \frac{1-x^n}{1-x}. $$
 
 Since $$ x = e^{i \frac{2\pi}{n}}$$, replacing $$x$$ in the formula, we get:
-$$ \frac{1-e^{2k\pi}{1-e^{\frac{2kpi}{n}$$
+
+                         $$ \frac{1-e^{2k\pi}{1-e^{\frac{2kpi}{n}$$
 
 And from euler's formula, we know:
 
-$$ e^{i 2\pi} = \cos(2\pi) + i\sin(2\pi), $$
+                          $$ e^{i 2\pi} = \cos(2\pi) + i\sin(2\pi), $$
 
 which equals 1. So, the sum simplifies to:
 
-$$ \frac{1 - 1^n}{1 - e^{\frac{2\pi}{n}} = 0. $$
+                          $$ \frac{1 - 1^n}{1 - e^{\frac{2\pi}{n}} = 0. $$
 
 So, the total sum is 0.
 
 We can still prove this zero for vectors of any magnitude. Suppose the vectors have a magnitude of $$r$$, geometrically it means all these unit vectors are scaled by a factor of $$r$$. When you look at Euler's expression for these vectors, this is what it looks like:
 
-$$\sum_{k=0}^{n-1} r \cdot e^{i\frac{2k\pi}{n}}$$
+                          $$\sum_{k=0}^{n-1} r \cdot e^{i\frac{2k\pi}{n}}$$
 
 Since $$r$$ is constant, we can pull it out of the summation:
 
-$$r \cdot \sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}}$$
+                          $$r \cdot \sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}}$$
 
 We already proved what this summation is: 0
 
@@ -163,4 +171,3 @@ This really shows how abstract math concepts can give us such clear and elegant 
 Whether you’re here out of curiosity or to dig deeper, I hope you enjoyed this journey as much as I did. If you liked this video, make sure to hit that thumbs up and subscribe to Math Simplified for more awesome math adventures.
 
 Thanks for watching, and until next time, keep exploring the amazing world of math!
-
