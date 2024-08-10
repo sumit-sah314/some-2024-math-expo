@@ -136,21 +136,35 @@ This should look familiar—it’s a geometric series! To sum up a geometric ser
 
                           $$ \frac{1-x^n}{1-x} $$
 
-Since $$ x = e^{i \frac{2\pi}{n}}$$, replacing $$x$$ in the formula, we get:
+Since we have \( x = e^{i \frac{2\pi}{n}} \), replacing \( x \) in the formula, we get:
 
-                         $$ \frac{1-e^{2k\pi}{1-e^{\frac{2kpi}{n}$$
+\[
+\frac{1 - e^{i\frac{2\pi}{n} \cdot n}}{1 - e^{i\frac{2\pi}{n}}}
+\]
 
-And from euler's formula, we know:
+Here, the two \( n \) terms in the exponent cancel out, leaving us with:
 
-                          $$ e^{i 2\pi} = \cos(2\pi) + i\sin(2\pi), $$
+\[
+\frac{1 - e^{i2\pi}}{1 - e^{i\frac{2\pi}{n}}}
+\]
 
-which equals 1. So, the sum simplifies to:
+Now, from Euler's formula, we know:
 
-                          $$ \frac{1 - 1^n}{1 - e^{\frac{2\pi}{n}} = 0. $$
+\[
+e^{i 2\pi} = \cos(2\pi) + i\sin(2\pi)
+\]
 
-So, the total sum is 0.
+which simplifies to 1. So, the sum becomes:
 
-We can still prove this zero for vectors of any magnitude. Suppose the vectors have a magnitude of $$r$$, geometrically it means all these unit vectors are scaled by a factor of $$r$$. When you look at Euler's expression for these vectors, this is what it looks like:
+\[
+\frac{1 - 1}{1 - e^{i\frac{2\pi}{n}}} = 0
+\]
+
+Since the numerator is 0, the whole expression equals 0 regardless of the denominator. Therefore, the total sum is 0.
+
+Remember, we initially considered unit vectors. However, this result holds true for vectors of any magnitude. We can set aside this result for unit vectors for now.
+
+Suppose the vectors have a magnitude of $$r$$, geometrically it means all these unit vectors are scaled by a factor of $$r$$. When you look at Euler's expression for these vectors, this is what it looks like:
 
                           $$\sum_{k=0}^{n-1} r \cdot e^{i\frac{2k\pi}{n}}$$
 
