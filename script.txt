@@ -182,6 +182,8 @@ The cool thing about this problem is how simple it seems at first, yet the solut
 
 This really shows how abstract math concepts can give us such clear and elegant solutions to real-world problems.
 
+The examples we saw at the beginning—electric fields and forces—were just two, but this concept has many other fascinating applications. 
+
 Whether you’re here out of curiosity or to dig deeper, I hope you enjoyed this journey as much as I did. If you liked this video, make sure to hit that thumbs up and subscribe to Math Simplified for more awesome math adventures.
 
 Thanks for watching, and until next time, keep exploring the amazing world of math!
