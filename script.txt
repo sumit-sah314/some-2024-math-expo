@@ -178,6 +178,10 @@ Hence, $$r \cdot 0 = 0 $$.
 
 And that wraps up our proof that the sum of the vectors is zero, using Euler's formula and the properties of geometric series.
 
+For my programming friends who might not prefer this detailed proof, or for anyone looking to verify the result computationally, here’s a Python code snippet you can use to confirm the outcome.
+
+[Show Code]
+
 The cool thing about this problem is how simple it seems at first, yet the solution has so much depth. What starts off as a basic vector addition puzzle turns into an exciting dive into complex numbers and geometric series.
 
 This really shows how abstract math concepts can give us such clear and elegant solutions to real-world problems.
