@@ -252,8 +252,6 @@ But the examples we explored earlier are just a glimpse into the many applicatio
 
 For instance, in 2D molecular geometry, consider benzene (C₆H₆). This molecule is planar, with carbon atoms arranged in a perfect hexagon. The bond vectors between the carbon atoms cancel each other out due to their symmetrical arrangement, which contributes to the stability of benzene. This is a great example of how symmetry in vector addition plays a crucial role in real-world chemistry.
 
-In structural engineering, particularly in the design of 2D trusses used in bridges, roofs, and towers, the forces acting on each member of the truss must balance out for the structure to remain stable. By ensuring these forces cancel each other out, engineers can design trusses that safely support loads without risking collapse, maintaining the safety and integrity of the structure.
-
 Another interesting application is in three-phase power systems. In a balanced three-phase system, the three alternating currents are spaced 120 degrees apart, and their vector sum is zero. This balance is crucial for the efficient transmission of electrical power, preventing unwanted vibrations or energy losses, which is why three-phase power systems are the standard in industrial and commercial power distribution.
 
 And lastly let’s not forget rotational systems like fans and turbines. The forces exerted by the blades of a fan are designed to cancel out, allowing for smooth, balanced rotation without any wobbling or unnecessary wear and tear.
