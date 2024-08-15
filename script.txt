@@ -70,38 +70,38 @@ Following this pattern, the $$k_th$$ vector makes an angle of $$\frac{2k\pi}{n}$
 
 Substituting this expression for $$\theta_k$$ into our vector expression, we get:
 
-              $$\vec{\text{v}}_k = \cos\left(\frac{2k\pi}{n}\right) \hat{i} + \sin\left(\frac{2k\pi}{n}\right) \hat{j}$$
+               $$\vec{\text{v}}_k = \cos\left(\frac{2k\pi}{n}\right) \hat{i} + \sin\left(\frac{2k\pi}{n}\right) \hat{j}$$
 
 The k-th vector, represented by $$v_k$$ can thus be written as the sum of these components:
 
-              $$\vec{\text{v}}_k = \cos\left(\theta_k\right) \hat{i} + \sin\left(\theta_k\right) \hat{j}$$
+               $$\vec{\text{v}}_k = \cos\left(\theta_k\right) \hat{i} + \sin\left(\theta_k\right) \hat{j}$$
 
 Now, to find the total vector sum, we add up all the vectors from $$k = 0$$ to $$n - 1$$. The total vector sum is:
 
-               $$\sum_{k=0}^{n-1} \vec{\text{v}}_k = \sum_{k=0}^{n-1} \left(\cos\left(\frac{2k\pi}{n}\right) \hat{i} + 
+                $$\sum_{k=0}^{n-1} \vec{\text{v}}_k = \sum_{k=0}^{n-1} \left(\cos\left(\frac{2k\pi}{n}\right) \hat{i} + 
                \sin\left(\frac{2k\pi}{n}\right) \hat{j}\right)$$
 
 Breaking this down into x and y components, we have:
 
-               $$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) \hat{i} + \sum_{k=0}^{n-1} \sin\left(\frac{2k\pi} 
+                $$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) \hat{i} + \sum_{k=0}^{n-1} \sin\left(\frac{2k\pi} 
                 {n}\right) \hat{j}$$
 
 Thus, the sum of all the vectors is the sum of the x-components plus the sum of the y-components. This decomposition simplifies the process of finding the resultant vector.
 
 To prove that the vector sum is zero, we need to show that both the sum of the x and y components sum to zero simultaneously. That is, we need to prove:
 
-                 $$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) = 0 \quad \text{and} \quad \sum_{k=0}^{n-1} 
+                  $$\sum_{k=0}^{n-1} \cos\left(\frac{2k\pi}{n}\right) = 0 \quad \text{and} \quad \sum_{k=0}^{n-1} 
                     \sin\left(\frac{2k\pi}{n}\right) = 0$$
 
 This is a sub-problem within our original problem, and directly proving these sums are zero using trigonometric identities can be complex and tedious. Here, Euler's formula provides an elegant solution.
 
 If you clicked on this video, you probably already have a basic understanding of Euler's Formula. I won’t dive deep into the details since I’ve covered it in my earlier videos in this playlist. For now, let me give you a quick overview. Picture a point in a complex plane that is a unit distance away from the origin making an angle $$\theta$$ with the x-axis. It represent a complex number with real part $$\cos(\theta)$$ and imaginary part $$\sin(\theta)$$. According to Euler's Formula, this complex number can also be written in an exponential form:
 
-                   $$e^{i\theta} = \cos(\theta) + i\sin(\theta)$$
+                  $$e^{i\theta} = \cos(\theta) + i\sin(\theta)$$
 
 In this context, we are going to shift these vectors into the complex plane. Here each vector can be represented as a comlex number, where the real part $$\cos{2k\pi}{n}$$ corresponds to the x-component and the imaginary part $$\sin{2k\pi}{n}$$corresponds to the y-component. Thanks to Euler's Formula, these vectors can also be written in an exponential form:
 
-                   $$e^{i\frac{2k\pi}{n}} = \cos\left(\frac{2k\pi}{n}\right) + i\sin\left(\frac{2k\pi}{n}\right)$$
+                  $$e^{i\frac{2k\pi}{n}} = \cos\left(\frac{2k\pi}{n}\right) + i\sin\left(\frac{2k\pi}{n}\right)$$
 
 So, the sum of all these vectors is:
 
@@ -110,7 +110,7 @@ So, the sum of all these vectors is:
 
 If we can somehow prove that the sum of these exponents is zero, i.e.,
 
-                   $$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}} = 0$$
+                  $$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}} = 0$$
 
 then both its real and imaginary parts must also be zero. This would imply:
 
@@ -121,7 +121,7 @@ The sum of x and y components of the vectors is zero, resulting in a null or zer
 
 Alright, let’s jump right into our final proof. Let’s take another look at this exponential representation of the vector sum.
             
-                    $$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}}
+                  $$\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}}
 
 When we expand this summation, it looks like this:
 
@@ -130,7 +130,7 @@ When we expand this summation, it looks like this:
 
 Notice that \( e^{i \frac{2\pi}{n}} \) is common in all terms, , so let’s make things simpler by setting $$e^{i \frac{2\pi}{n}} = x$$. Now, our series looks like this:
 
-                         $$ 1 + x + x^2 + x^3 + \ldots + x^{n-1}$$
+                    $$ 1 + x + x^2 + x^3 + \ldots + x^{n-1}$$
 
 This should look familiar—it’s a geometric series! To sum up a geometric series, we use a specific formula. The sum of this geometric series is given by:
 
@@ -177,6 +177,68 @@ We already proved what this summation is: 0
 Hence, $$r \cdot 0 = 0 $$.
 
 And that wraps up our proof that the sum of the vectors is zero, using Euler's formula and the properties of geometric series.
+
+The beauty of this problem is that it isn't limited to just a finite number of vectors. We can use the same principle to prove that the sum is zero even for continuous charge distributions or any continuous distribution of forces—just like the charged ring example we saw earlier.
+
+When we move from a discrete set of vectors to a continuous distribution, the summation transits into an integral. 
+
+The summation:
+
+\[
+\sum_{k=0}^{n-1} e^{i\frac{2k\pi}{n}}
+\]
+
+can be transformed into an integral as 𝑛 approaches infinity:
+
+\[
+\int_0^{n-1} e^{i\frac{2k\pi}{n}} \, d\theta
+\]
+
+Since 𝑛 is nearly equal to 𝑛−1 as 𝑛 approaches infinity, we can extend the limits of integration from 0 to n.
+
+\[
+\int_0^{n} e^{i\frac{2k\pi}{n}} \, d\theta
+\]
+
+As 𝑛 approaches infinity, the discrete angles 2𝑘𝜋/𝑛 become a continuous variable 𝜃 that ranges from 0 to 2𝜋.
+
+\[
+\int_0^{2\pi} e^{i\theta} \, d\theta
+\]
+
+To evaluate the integral, we use the antiderivative of e^{i\theta}, which is:
+
+\[
+\int e^{i\theta} \, d\theta = \frac{e^{i\theta}}{i}
+\]
+
+Now, applying the limits of integration from 0 to 2𝜋:
+
+\[
+\left. \frac{e^{i\theta}}{i} \right|_0^{2\pi} = \frac{e^{i2\pi}}{i} - \frac{e^{i\cdot0}}{i}
+\]
+
+We know from Euler's formula that:
+
+\[
+e^{i2\pi} = \cos(2\pi) + i\sin(2\pi) = 1
+\]
+
+and
+
+\[
+e^{i\cdot0} = \cos(0) + i\sin(0) = 1
+\]
+
+Substituting these into the integral:
+
+\[
+\frac{1}{i} - \frac{1}{i} = 0
+\]
+
+Hence, the integral of \( e^{i\theta} \) from \(0\) to \(2\pi\) is zero.
+
+This proves that the sum of vectors is zero even in a continuous distribution, just like in the discrete case.
 
 For my programming friends who might not prefer this detailed proof, or for anyone looking to verify the result computationally, here’s a Python code snippet you can use to confirm the outcome.
 
